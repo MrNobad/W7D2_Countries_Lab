@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Countries</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+  <div id="app">
+
+    <div id="filterInput">
+      <h3>Filter Countries By Name</h3>
+      <input type="text" v-model.text="filteredCountries">
+
+
+    </div>
+    <section>
+      <div class="country" v-for="country in countries">
+        <h2>{{ country.name }}</h2>
+        <p>Population: {{ country.population }}</p>
+        <img id="flagImg" :src="country.flag">
+      </div>
+    </section>
+  </div>
+</body>
+</html>

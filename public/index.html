@@ -11,8 +11,9 @@
 
     <div id="filterInput">
       <h3>Filter Countries By Name</h3>
-      <input type="text" v-model.text="filteredCountries">
-
+      <select id="text" v-model="filteredCountries">
+        <option v-for="country in countries" :value="country">{{ country.name }}</option>
+      </select>
 
     </div>
     <section>
